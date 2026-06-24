@@ -96,6 +96,6 @@ contact = {
     "email": "layoadetutu@email.com",
     "phone": "+2348111783216",
     "location": "Lagos, Nigeria",
-    "github": "https://github.com/layoadetutu",
-    "linkedin": "https://linkedin.com/in/oluwatoyosi-isa",
+    "github": "https://github.com/Layo-Adetutu/portfolio-website",
+    "linkedin": "https://www.linkedin.com/in/oluwatoyosi-isa-b05231384?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
 }
