@@ -5,7 +5,7 @@
 
 .hero{
     min-height:100vh;
-    background:#89cdf4;
+    background:whitesmoke;
 
     display:flex;
     justify-content:space-between;
@@ -20,48 +20,89 @@
 
 .hero-text h1{
     font-size:4rem;
-    color:#0B1F3A;
+    color:#18064ff8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .hero-text h2{
     color:goldenrod;
     margin-top:10px;
+    font-style: italic;
 } 
 
 
 .sub-title{
-    color:#046ef8;
+    color:#041225;
     padding-top: 25px;
+    padding-bottom: 30px;
 }
 
-.hero-text p{
+.hero-text h3{
     margin-top:25px;
+    padding-top:10px;
+    padding-bottom:10px;
     font-size:1.2rem;
-    color:#444;
+    color:#085f30b9;
     line-height:1.8;
 }
 
-.hero-buttons{
-    margin-top:20px;
+
+.hero-text h4{
+    margin-top:25px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:1.2rem;
+    color:#085f30b9;
+    line-height:1.8;
 }
 
-.hero-buttons button{
-    padding:15px 20px;
-    margin-right:10px;
-    border:none;
-    cursor:pointer;
-    font-size:1rem;
+
+
+/* Hero buttons */
+.hero-buttons {
+    margin-top: 50px;
+    display: flex;          /* keeps buttons side by side */
+    gap: 20px;              /* spacing between them */
 }
 
-.hero-buttons button:first-child{
-    background:#0B1F3A;
-    color:white;
+/* Base button styles */
+.hero-buttons button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;   /* smooth hover animation */
+    border-radius: 8px;          /* default rounded corners */
 }
 
-.hero-buttons button:last-child{
-    background:goldenrod;
-    color:white;
+/* First button */
+.hero-buttons button:first-child {
+    background: #0B1F3A;
+    color: white;
 }
+
+.hero-buttons button:first-child:hover {
+    transform: translateY(-5px);
+    background: #021029;         /* darker shade on hover */
+    border-color: #4f0668;
+}
+
+/* Second button */
+.hero-buttons button:last-child {
+    background: rgb(27, 13, 88);
+    color: white;
+    border-radius: 30px;         /* pill shape */
+}
+
+.hero-buttons button:last-child:hover {
+    transform: translateY(-5px);
+    background: rgb(24, 180, 165); /* darker teal on hover */
+    border-color: #0B1F3A;
+}
+
+
+
+/* Hero image */
 
 .hero-image{
     width:40%;
@@ -88,22 +129,22 @@
 
 .profile-image {
 
-    width:350px;
-    height:350px;
+    width:400px;
+    height:400px;
 
     object-fit:cover;
 
     border-radius:50%;
-
-    border:5px solid #D4AF37;
     
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    border:1px solid #D4AF37;
+    
+    box-shadow:0 2px 10px rgba(32, 3, 111, 0.806);
 
 }
 
 
 
-
+/* Navbar */
 .navbar{
     display:flex;
     justify-content:space-between;
@@ -160,36 +201,29 @@
 }
 
 
-
-
-
-
-
-
-
-
+/* about */
 .about{
     padding:100px 80px;
-    background:#F8F9FA;
+    background:#022d59;
 }
 
 .about-container{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
     text-align:center;
 }
 
 .about-container h2{
     font-size:2.5rem;
-    color:#0B1F3A;
+    color:white;
     margin-bottom:30px;
     position:relative;
 }
 
 .about-container h2::after{
     content:"";
-    width:80px;
-    height:3px;
+    width:0px;
+    height:px;
     background:#D4AF37;
     position:absolute;
     left:50%;
@@ -199,7 +233,7 @@
 
 .about-container p{
     font-size:1.1rem;
-    color:#333;
+    color:white;
     line-height:1.8;
     margin-bottom:20px;
 }
@@ -218,15 +252,15 @@
 
 .skills h2{
     font-size:2.5rem;
-    color:#0B1F3A;
+    color:#040533;
     margin-bottom:50px;
     position:relative;
 }
 
 .skills h2::after{
     content:"";
-    width:80px;
-    height:3px;
+    width:0px;
+    height:px;
     background:#D4AF37;
     position:absolute;
     left:50%;
@@ -256,7 +290,7 @@
 }
 
 .skill-box h3{
-    color:#0B1F3A;
+    color:#063a1c;
     margin-bottom:15px;
 }
 
@@ -278,7 +312,7 @@
 
 .projects{
     padding:100px 80px;
-    background:#F8F9FA;
+    background:#9df99e;
     text-align:center;
 }
 
@@ -291,8 +325,8 @@
 
 .projects h2::after{
     content:"";
-    width:80px;
-    height:3px;
+    width:0px;
+    height:0px;
     background:#D4AF37;
     position:absolute;
     left:50%;

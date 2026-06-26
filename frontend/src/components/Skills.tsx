@@ -12,7 +12,7 @@ function Skills() {
   const [skills, setSkills] = useState<Skills | null>(null)
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/skills/")
+    fetch(`${import.meta.env.VITE_API_URL}/api/skills/`)
       .then(response => response.json())
       .then(data => {
         setSkills(data)

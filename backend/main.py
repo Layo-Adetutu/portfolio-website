@@ -21,9 +21,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(bio.router, prefix="/api/bio")
+
 app.include_router(skills.router, prefix="/api/skills")
 app.include_router(projects.router, prefix="/api/projects")
+app.include_router(bio.router, prefix="/api/bio")
 app.include_router(contact.router, prefix="/api/contact")
 
 @app.get("/")

@@ -33,7 +33,7 @@ function Hero() {
 
       <div className="hero-text">
 
-        <h3>Hello there , I'm</h3>
+        <h3>Now that you are in my portfolio , I am</h3>
 
         <h1>
           {bio?.name}
@@ -43,14 +43,9 @@ function Hero() {
           {bio?.title}
         </h2>
 
-        <h3 className="sub-title">
+        <h4 className="sub-title">
           {bio?.about}
-        </h3>
-
-        <p>
-          {bio?.tagline}
-        </p>
-
+        </h4>
 
       <div className="hero-buttons">
 
