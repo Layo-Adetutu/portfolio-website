@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react"
 
+import { useState, useEffect } from "react"
+import myself from "../assets/myself.jpg"
 
 type Bio = {
   name: string
@@ -8,49 +9,79 @@ type Bio = {
   about: string
 }
 
-
-
 function About() {
-
   const [bio, setBio] = useState<Bio | null>(null)
 
   useEffect(() => {
-
     fetch(`${import.meta.env.VITE_API_URL}/api/bio/`)
-    .then(response => response.json())
-    .then(data => {
-      setBio(data)
-    })
-
-}, [])
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch bio")
+        }
+        return response.json()
+      })
+      .then(data => setBio(data))
+      .catch(error => {
+        console.error("Error fetching bio:", error)
+      })
+  }, [])
 
   return (
     <section id="about" className="about">
-
       <div className="about-container">
+        <div className="about-image">
+          <img
+            src={myself}
+            alt={`${bio?.name || "Oluwatoyosi Adetutu Isa"} working on a laptop`}
+            className="about-profile-image"
+          />
 
-        <h2>About Me</h2>
+          <div className="about-image-badge">
+            <span className="about-badge-icon">✦</span>
+            <div>
+              <strong>Problem Solver</strong>
+              <p>Always learning. Building for the future.</p>
+            </div>
+          </div>
+        </div>
 
-        <p>
-          {bio?.name} is a {bio?.title} with a growing passion for
-          software engineering and building technology that solves
-          real-world problems.{bio?.tagline}
-        </p>
+        <div className="about-content">
+          <p className="about-eyebrow">ABOUT ME</p>
 
-        <p>
-          {bio?.name} specializes in creating responsive websites and backend systems
-          using modern technologies like React, TypeScript, Python, and FastAPI.
-        </p>
+          <h2>
+            From ideas to <span>impact.</span>
+          </h2>
 
-        <p>
-          {bio?.name}'s goal is to become a well-rounded software engineer who builds
-          scalable and impactful digital solutions.
-        </p>
+          <p className="about-intro">
+            I'm {bio?.name || "Oluwatoyosi Adetutu Isa"}, a{" "}
+            {bio?.title || "Full-Stack Developer"} passionate about building
+            meaningful digital solutions that solve real-world problems.
+          </p>
 
+          <p className="about-description">
+            I work across the application lifecycle, from developing
+            intuitive, responsive user interfaces to building backend
+            services, APIs, and database-driven applications. My technical
+            interests span frontend development, backend engineering,
+            Python, and database management.
+          </p>
+
+          <p className="about-description">
+            My goal is to create technology that is functional, maintainable,
+            and designed around real user needs. I believe in continuous
+            learning, thoughtful problem-solving, and turning ideas into
+            practical solutions.
+          </p>
+
+          <a href="#projects" className="about-button">
+            Explore My Work <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
-
     </section>
   )
 }
 
 export default About
+
+
