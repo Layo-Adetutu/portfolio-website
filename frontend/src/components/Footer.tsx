@@ -1,37 +1,51 @@
 function Footer() {
-  return (
-    <footer className="footer">
+return ( <footer className="footer"> <div className="footer-content"> <a href="#home" className="footer-brand">
+Oluwatoyosi Isa<span>.</span> </a>
 
-      <div className="footer-content">
+    <p className="footer-role">
+      Full-Stack Developer <span>·</span> Aspiring Software Engineer
+    </p>
 
-        <h3>Oluwatoyosi Isa</h3>
+    <p className="footer-description">
+      Building thoughtful digital experiences and practical software
+      solutions, one project at a time.
+    </p>
 
-        <p>
-          Full-Stack Web Developer | Aspiring Software Engineer
-        </p>
+    <nav className="footer-links" aria-label="Footer links">
+      <a
+        href="https://github.com/Layo-Adetutu"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub <span aria-hidden="true">↗</span>
+      </a>
 
-        <p>
-          Building modern web applications and scalable digital solutions.
-        </p>
+      <a
+        href="https://www.linkedin.com/in/oluwatoyosi-isa-b05231384/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn <span aria-hidden="true">↗</span>
+      </a>
 
-        <div className="footer-links">
+      <a href="mailto:isatoyosi@gmail.com">
+        Email <span aria-hidden="true">↗</span>
+      </a>
+    </nav>
 
-          <a href="#">GitHub</a>
+    <div className="footer-divider" />
 
-          <a href="#">LinkedIn</a>
+    <p className="copyright">
+      © {new Date().getFullYear()} Oluwatoyosi Isa. All rights reserved.
+    </p>
 
-          <a href="#">Email</a>
+    <a href="#home" className="back-to-top">
+      Back to top ↑
+    </a>
+  </div>
+</footer>
 
-        </div>
-
-        <p className="copyright">
-          © 2026 Oluwatoyosi Isa. All rights reserved.
-        </p>
-
-      </div>
-
-    </footer>
-  )
+)
 }
 
 export default Footer
